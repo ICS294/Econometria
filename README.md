@@ -1,4 +1,4 @@
-# ICS294 Econometría Paralelo 102
+# ICS294 Econometría
 ---
 Repositorio para las ayudantías del curso ICS294 Segundo Semestre 2023
 
