@@ -1,0 +1,29 @@
+---
+title: "Ayudantia_0_toy"
+author: "ICS294"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+## Ayudantía 0
+
+---
+
+### Ingrese su nombre
+
+
+## Packages
+
+```{r}
+
+```
+
+
+
+## Dataset
+```{r}
+items <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-05-05/items.csv')
+
+```
+
+
