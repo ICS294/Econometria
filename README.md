@@ -7,6 +7,5 @@ Repositorio para las ayudantías del curso ICS294 Segundo Semestre 2023
 
 | Paralelo | Nombre | GitHub | Email |
 | ----- | ----- | ----- | ---- |
-| 101 y 102 | Jorge Ortega | null | jorge.ortega@usm.cl |
-| 102 | Diego Bernal | Diego-bernals | diego.bernals@usm.cl |
-| 101 | Juan Miño | juansebm | JUAN.MINO@usm.cl |
+| 101 / 102 | Jorge Ortega | null | jorge.ortega@usm.cl |
+| 101 / 102 | Juan Miño | juansebm | juan.mino@usm.cl |
