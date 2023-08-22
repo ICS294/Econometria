@@ -1,6 +1,8 @@
 # ICS294 Econometría
 ---
-Repositorio para las ayudantías del curso ICS294 Segundo Semestre 2023
+Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestre 2023.
+
+**IMPORTANTE** *Para visualizar las ayudantías pueden descargar el .html y visualizarlo sin problemas en su navegador.*
 
 ## Equipo Docente
 ---
