@@ -1,6 +1,6 @@
 # ICS294 Econometría
 
-![ICS294]([URL de la imagen](https://images.pexels.com/photos/5561923/pexels-photo-5561923.jpeg))
+![ICS294](https://images.pexels.com/photos/5561923/pexels-photo-5561923.jpeg)
 
 ---
 Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestre 2023.
