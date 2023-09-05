@@ -5,7 +5,6 @@ Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestr
 **IMPORTANTE** *Para visualizar las ayudantías pueden descargar el .html y visualizarlo sin problemas en su navegador.*
 
 ## Equipo Docente
----
 
 | Paralelo | Nombre | GitHub | Email | LinkedIn |
 | ----- | ----- | ----- | ---- | ---- |
