@@ -1,4 +1,7 @@
 # ICS294 Econometría
+
+![ICS294]([URL de la imagen](https://images.pexels.com/photos/5561923/pexels-photo-5561923.jpeg))
+
 ---
 Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestre 2023.
 
@@ -7,10 +10,11 @@ Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestr
 ## Equipo Docente
 ---
 
-| Paralelo | Nombre | GitHub | Email |
-| ----- | ----- | ----- | ---- |
-| 101 / 102 | Jorge Ortega | ---- | jorge.ortega@usm.cl |
-| 101 / 102 | Juan Miño | juansebm | juan.mino@usm.cl |
+| Paralelo | Nombre | GitHub | Email | LinkedIn |
+| ----- | ----- | ----- | ---- | ---- |
+| 101 / 102 | Jorge Ortega | ---- | jorge.ortega@usm.cl |jortega70|
+| 101 | Juan Miño | juansebm | juan.mino@usm.cl |juansma|
+| 102 | Javier Lagos | ---- | javier.lagosp@usm.cl ||
 
 ## Organización
 
