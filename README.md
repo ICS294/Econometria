@@ -5,12 +5,12 @@ Repositorio para las ayudantías del curso Econometría ICS294 - Segundo Semestr
 **IMPORTANTE** *Para visualizar las ayudantías pueden descargar el .html y visualizarlo sin problemas en su navegador.*
 
 ## Equipo Docente
----
 
-| Paralelo | Nombre | GitHub | Email |
-| ----- | ----- | ----- | ---- |
-| 101 / 102 | Jorge Ortega | ---- | jorge.ortega@usm.cl |
-| 101 / 102 | Juan Miño | juansebm | juan.mino@usm.cl |
+| Paralelo | Nombre | GitHub | Email | LinkedIn |
+| ----- | ----- | ----- | ---- | ---- |
+| 101 / 102 | Jorge Ortega | ---- | jorge.ortega@usm.cl |jortega70|
+| 101 | Juan Miño | juansebm | juan.mino@usm.cl |juansma|
+| 102 | Javier Lagos | ---- | javier.lagosp@usm.cl ||
 
 ## Organización
 
