@@ -1,0 +1,99 @@
+---
+title: "Actividad N°3"
+author: "Juan Miño."
+# date: "Semestre 2023-02"    
+output:
+  rmdformats::html_docco:
+    highlight: tango
+    df_print: paged
+    code_folding: show
+---   
+
+## Suponga que está interesado en estimar el efecto de las horas dedicadas a un curso de preparación para la Prueba de Aptitud Escolar (SAT) en la puntuación total del SAT. La población son todos los estudiantes de último año de secundaria que van a la universidad para un determinado año.
+
+*Suponga que recibe una subvención para realizar un experimento controlado. Explique cómo estructuraría el experimento con el fin de estimar el efecto causal de horas en SAT.*
+
+En un experimento controlado, podemos estructurarlo de la siguiente manera:
+
+- Seleccionar un grupo de estudiantes de último año de secundaria de manera aleatoria.
+
+- Dividirlos en dos grupos: uno que recibirá un curso de preparación para el SAT y otro que no.
+
+- En el grupo que SI recibió el curso, registrar la cantidad de horas dedicadas al estudio.
+
+- Después de un período, medir las puntuaciones totales del SAT de ambos grupos y extraer conclusiones.
+
+*Considere el caso más realista en el que los estudiantes eligen cuánto tiempo dedicar al curso de preparación, y solo puede muestrear aleatoriamente las horas dedicadas y el puntaje obtenido. de la población. Escriba el modelo de población como: \[ \hat{sat} = \beta_0 + \beta_1\cdot horas + \epsilon \] donde, como es habitual en un modelo con una intersección, podemos suponer $E(\mu)=0$. Enumere al menos dos factores contenidos en $\mu$.*
+
+*¿Es probable que tengan una correlación positiva o negativa con las horas?*
+
+En este modelo, $\beta_1$ representa el cambio en la puntuación total del SAT por cada hora adicional dedicada al estudio. Los factores contenidos en $\mu$ pueden incluir eventos distractores (correlación negativa) u horas de sueño diarias (correlación positiva).
+
+*En la ecuación del inciso (b), ¿cuál debería ser el signo de \[\beta_1\] si el curso de preparación es eficaz?*
+
+Si el curso de preparación es efectivo, el signo de $\beta_1$ debiese ser positivo. Esto significa que un aumento en las horas dedicadas al estudio está asociado con un aumento en la puntuación total del SAT.
+
+*En la ecuación de la parte (b), ¿cuál es la interpretación de $\beta_0$?.*
+
+$\beta_0$ representa el valor esperado de la puntuación total del SAT cuando el número de horas dedicadas al estudio es cero. En otras palabras, es la puntuación prevista en el SAT para alguien que no ha tomado el curso de preparación y no ha estudiado. Esto podría considerarse como la habilidad innata del estudiante.
+
+## Use los datos en WAGE2 (Wooldridge) para estimar una regresión simple que explique el salario mensual (wage) en términos de Puntuación de Coeficiente Intectual (QI):
+
+*Halle el salario medio y el coeficiente intelectual medio de la muestra. ¿Cuál es la desviación estándar de la muestra de coeficiente intelectual? (Los puntajes de QI están estandarizados para que el promedio en la población sea 100 con una desviación estándar igual a 15.)*
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# Cargar el paquete "wooldridge" si aún no está instalado
+if (!require(wooldridge)) {
+  install.packages("wooldridge")
+  library(wooldridge)
+}
+
+# Carga de los datos
+data('wage2')
+
+# Resumen de datos co salario medio y el coeficiente intelectual medio
+head(wage2)
+summary(wage2)
+```
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# Otra forma de obtener los estadísticos
+mean_salary <- mean(wage2$wage)
+mean_iq <- mean(wage2$IQ)
+sd_iq <- sd(wage2$IQ)
+
+mean_salary
+mean_iq
+sd_iq
+```
+
+*Estime un modelo de regresión simple donde un aumento de un punto en el QI cambia el salario en un monto constante en dólares. Use este modelo para encontrar el aumento previsto en el salario para un aumento en QI de 15 puntos. ¿El coeficiente intelectual explica la mayor parte de la variación en el salario?*
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# Estimar el modelo de regresión simple
+model <- lm(wage ~ IQ, data = wage2)
+print(summary(model))
+
+# Obtener el coeficiente para IQ
+beta_iq <- coef(model)["IQ"]
+
+# Calcular el aumento previsto en el salario para un aumento en IQ de 15 puntos
+increase_in_salary <- beta_iq * 15
+
+# Calcular la proporción de variación explicada por el coeficiente intelectual
+r_squared <- summary(model)$r.squared
+
+increase_in_salary
+r_squared
+```
+Se da un incremento de 101 a 124. El R-squared es bajo, el coeficiente intelectual no explica la mayor parte de la variación en el salario.
+
+*Ahora, estime un modelo en el que cada aumento de un punto en el CI tenga el mismo efecto porcentual en salario. Si el coeficiente intelectual aumenta en 15 puntos, ¿cuál es el aumento porcentual aproximado en el salario previsto?*
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+# Estimar el modelo con efecto porcentual
+model_percent <- lm(log(wage) ~ log(IQ), data = wage2)
+summary(model_percent)
+```
+
+Aumento de 0.8 por ciento.
